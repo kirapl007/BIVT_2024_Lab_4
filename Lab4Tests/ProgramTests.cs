@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestPlatform.Utilities;
+using Microsoft.VisualStudio.TestPlatform.Utilities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -237,10 +237,10 @@ namespace Tests
             };
             int[,] error = new int[rand.Next(0, 3), rand.Next(8, 10)];
             int[,] outputC, outputE, answer = new int[,] {
-                { 1, 2, 3, 4, -5, -6, -7  },
                 { -9, -10, -11, -14, -15, -6, -2 },
-                { -9, -10, -11, -14, -15, -16, 1  },
                 { 5, 11, -17, 11, -10, 6, 5 },
+                { -9, -10, -11, -14, -15, -16, 1  },
+                { 1, 2, 3, 4, -5, -6, -7  },
                 { -9, -10, -11, -14, -15, 6, 4 }
             };
             // Act
@@ -1532,8 +1532,8 @@ namespace Tests
             };
             int[,] error = new int[rand.Next(0, 3), rand.Next(11, 15)];
             int[] outputC1, outputC2, outputE1, outputE2,
-                answer1 = new int[] { 1, 2, -3, 7, 7, 0, 6, -7, 9, -11, 1, 11, 15, 15, 2, 25, -19, 3, -99, 4, 5},
-                answer2 = new int[] { 5, 9, 10, -13, 14, 5, 5, 6, -7, 8, 0, 0, -1, -2, -3};
+                answer1 = new int[] { 1, 2, -3, 7, 7, 0, 6, -7, 9, -11, 1, 11, 15, 15, 2, 25, -19, 3, -99, 4, 5 },
+                answer2 = new int[] { 5, 9, 10, -13, 14, 5, 5, 6, -7, 8, 0, 0, -1, -2, -3 };
             // Act
             (outputC1, outputC2) = main.Task_3_6(matrix);
             (outputE1, outputE2) = main.Task_3_6(error);
@@ -1560,7 +1560,7 @@ namespace Tests
             int[] errorA = new int[rand.Next(0, 1)];
             int[] errorB = new int[rand.Next(0, 1)];
 
-            int[] outputC, outputE, 
+            int[] outputC, outputE,
                 answer = new int[] { 68, 79, 85, 124, 144, 155, 157, 182, 196 };
             // Act
             outputC = main.Task_3_7(A, B, 3);
